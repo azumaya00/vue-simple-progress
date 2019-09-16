@@ -12,7 +12,7 @@
 		exports["VueSimpleProgress"] = factory();
 	else
 		root["VueSimpleProgress"] = factory();
-})(this, function() {
+})(typeof self !== 'undefined' ? self : this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -247,7 +247,7 @@ exports.default = {
     pct: function pct() {
       var pct = this.val / this.max * 100;
       pct = pct.toFixed(2);
-      return Math.min(pct, this.max);
+      return pct;
     },
     size_px: function size_px() {
       switch (this.size) {

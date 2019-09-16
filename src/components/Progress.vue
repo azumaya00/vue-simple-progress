@@ -75,7 +75,7 @@
       pct() {
         var pct = this.val/this.max*100
         pct = pct.toFixed(2)
-        return Math.min(pct, this.max)
+        return pct
       },
       size_px() {
         switch (this.size)
